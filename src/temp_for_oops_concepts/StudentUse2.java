@@ -1,4 +1,4 @@
-package temp;
+package temp_for_oops_concepts;
 
 import oops_concepts.Student;
 
