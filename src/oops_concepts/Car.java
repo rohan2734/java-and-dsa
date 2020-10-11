@@ -10,6 +10,12 @@ public class Car extends Vehicle{
 		System.out.println("Car Constructor");
 	}
 	
+	public boolean isConvertible() {
+		return isConvertible;
+	}
+	
+	
+	
 	public void print() {
 		super.print();
 		/**

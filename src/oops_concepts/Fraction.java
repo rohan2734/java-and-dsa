@@ -1,4 +1,4 @@
-package fractionClass;
+package oops_concepts;
 
 public class Fraction {
 	private int numerator,denominator;
@@ -24,10 +24,12 @@ public class Fraction {
 		this.numerator=numerator;
 		simplify();
 	}
-	public void setDenominator(int denominator) {
+	public void setDenominator(int denominator) throws ZeroDenominatorException{
 		if(denominator==0) {
+			ZeroDenominatorException e = new ZeroDenominatorException();
+			throw e;
 			//TODO error out
-			return;
+			
 		}
 		this.denominator=denominator;
 		simplify();
