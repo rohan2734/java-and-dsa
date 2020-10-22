@@ -27,6 +27,15 @@ public class convert_String_to_numbers {
 		num = num*(int)(Math.pow(10,input.length() -1)) +smallAns;
 		return num;
 	}
+	
+	public static int convertString(String input) {
+		if(input.length() ==1) {
+			return input.charAt(0) - '0';
+		}
+		int smallOutput= convertString(input.substring(0, input.length()-1));
+		int lastDigit = input.charAt(input.length()-1) - '0';
+		return smallOutput*10 + lastDigit;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
