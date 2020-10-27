@@ -14,6 +14,25 @@ public class print_subsequences {
 		
 	}
 	
+	public static void printSubsets(int input[],int si,int outputSoFar[]) {
+		if(si == input.length) {
+			for(int i : outputSoFar) {
+				System.out.print(i+" ");
+			}
+			System.out.println();
+            return;
+		}
+		
+		int ans[]= new int[outputSoFar.length+1];
+		int count=0;
+        for(int i=0;i<outputSoFar.length;i++) {
+			ans[i]=outputSoFar[i];
+            count++;
+		}
+		ans[count]=input[si];
+		printSubsets(input,si+1,outputSoFar);
+        printSubsets(input,si+1,ans);
+	}
 	public static void printSubsequences(String input) {
 		printSubsequences(input,"");
 	}
