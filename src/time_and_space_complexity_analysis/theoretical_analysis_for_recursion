@@ -1,0 +1,19 @@
+* theoretical analysis for recursion
+
+	int factorial(int n){
+		if ( n== 0 )
+		{
+			return 1;
+		}
+		return n*factorial(n-1);
+	}
+	
+* here we do k1 operations for the if condition
+* let us assume that n is 100, then we called the factorial(n-1),
+  then we do k2 operations for getting the value and multiplying, and that work is k2
+  
+* but the function factorial(n-1) has also done some work, 
+  now how to add that ,
+* we can think like n-2 has done some work , and then n-3  and so on
+
+* the easiest way to think is , we write a recurrance relation

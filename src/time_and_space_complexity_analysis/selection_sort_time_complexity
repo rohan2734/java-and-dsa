@@ -1,0 +1,18 @@
+* selection sort
+
+* it goes to the each element, and finds the minimum element
+
+* here we do k operation for finding the minimum element,
+  and compare with the current element  , and if the current element
+  is larger then we swap it and update it,otherwise we move to
+  the next element.
+  
+* so we do kn work for first element, k(n-1) + k(n-2) + .. k(1)
+* k (  1 + 2+ ... n) = k * n * (n+1)/2 = kn^2/2 + k*n/2
+* we can ignore k*n/2, and k/2
+* so selection sort is O(n^2) time complexity
+
+* best case is also O(n^2) , because here also you will find the minum element
+  but you wont swap ,
+  
+* so best case , and worst case, selection sort is O(n^2)

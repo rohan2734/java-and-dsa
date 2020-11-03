@@ -1,0 +1,16 @@
+* for finding the best algorithm ,experimental analysis is not good
+* because the output of the algorithm is different for same inputs
+* it is dependent on the processor, that how much time it allots for running your program
+* in the background, there might be other programs also
+
+* it also depends on test case generation,
+* for example, if we give a sorted array of input[]={1,2,3,4,5};
+* then the insertion sort is very fast, but the selection sort is till slow
+* but that doesnt mean that  insertion sort, is a good algorithm, 
+* we need to code and test
+* sometimes it takes 10 hours for one crore numbers.
+
+
+* the solution is 
+* without coding or doing experimental analysis, how do we need to know what is the time complexity 
+

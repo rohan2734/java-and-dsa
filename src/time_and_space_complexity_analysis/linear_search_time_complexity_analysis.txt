@@ -1,0 +1,13 @@
+* linear search
+
+* we iterate over each element, and if we have found the 
+  input element we return the index,
+* if not we will move to the next index
+
+* so best case is ,when we have found the element, in the
+  first index itself
+* let us suppose, going to each element, checking if we have found
+  and moving to next element is k operations
+* then for n elements,it is kn operations
+* and  the time complexity is bigo of n => O(n)
+* and the worst case, is last element, and if the element is not present

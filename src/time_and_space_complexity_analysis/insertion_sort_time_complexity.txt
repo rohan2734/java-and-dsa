@@ -1,0 +1,33 @@
+* insertion sort
+
+* in insertion sort, we assume that the first element is 
+  sorted 
+  (since single element is sorted)
+  
+* ex: there is 3 already and 
+* now if we want to insert one more element, 2, 
+* then we put it in the sorted array
+
+* when we want to insert any element,
+  we compare with the  sorted array , and then we keep swapping
+  until we find the right place, if it is in the right place
+  we move to the next element.
+  
+* let us say, comparing the element with the sorted array
+  and swapping it  is k operations. 
+* and for the next one we need to do 2k and then 3K ... (n-1)k
+
+* k ( 1+2+ .. n-1) = k*n*(n-1)/2 = kn^2/2 - kn/2 
+
+* then the time complexity of insertion sort is bigo(n^2)
+
+* best case scenario for insertion sort.
+
+* for every element, we are doing only k work, and in the 
+ best case we are doing only kn work
+* and best case time complexity for insetion is bigo of n,  O(n)
+
+* but this doesnt matter, becuase we always talk about time complexity at worst case
+
+* it is as bad as selection sort and  bubble sort 
+   

@@ -1,0 +1,76 @@
+* BIG O NOTATION
+
+* selection sort => f(n) : 10n^2 + 5n + 8
+* Insertion sort => f(n) : 5n^2 + 2n^1 + 1000
+
+* now let us think about n^2 and n, 
+* when n=10000 or n=1000, then there is effect due to n^2 and n
+* we can also ignore n, when n=1000 compared to n^2.
+
+* now if Insertion sort => f(n) : 5n^2. 
+* then time taken is not exactly equal  to 5n^2, 
+* but it says, how many times, we need to add, subtract, or do if-checks and etc.
+* what we actually are trying to find out is number of unit operations.
+* here , when Insertion sort => f(n) : 5n^2., we are not going to consider 5, as n^2 is the predominant factor.
+
+* so we will be talking about number of unit operations but not time
+* we will focus on the highest power term, 
+* ex, n^2, and n , we focus on n^2,
+* ex nlogn and n, we focus on nlogn
+
+* we dont care about the coefficient of the function
+* let us talk about the  bigo notation
+
+* A => O(f(n))
+* an algorithm a is called bigo of f(n), if, time taken by algorithm a for input an<= k*f(n)
+* it says that , for any k, and k*f(n), this value if it is greater than n,means if k*f(n),
+  then it is a upperbound for the time with input n
+
+* for ex ,I.s =>  5n^2 + 10n + 1000 <= 6n^2 
+
+* T (I.S,n) <= 6n^2.
+
+
+ex: largest element in an array.
+	 _ _ _ _ _ _
+	|_|_|_|_|_|_|
+	
+	max = arr[0]
+	for(){
+		if( max < arr[i]){
+			max = a[i];
+		}
+	}
+	
+* so it takes k  unit operations, and then i get the max
+* so for every element, we do k unit operations, and we do it for n elements, so
+* so the amount of time T(n) => kn
+* Time taken < = (k+1)n 
+
+* now let us talk bout BUBBLE SORT
+* we compare first and second elements,and then swap
+    =>=>  
+   _ _ _ _ _ _
+  |_|_|_|_|_|_|
+  
+* here we compared 0,1 and 1,2 and .... n-1 comparisions
+* if we need k unit operations for swapping two elements, and we do n-1 times , 
+* then for the first iteration we need k(n-1) , 
+   _ _ _ _ _ _
+  |_|_|_|_|_|x|
+  
+* then for the second iteration we need k(n-2)
+   _ _ _ _ _ _
+  |_|_|_|_|x|x| 
+* then we need k(n-3) + ...... k
+* so ,  we need k( 1 + 2 + .. n-1) = k * ((n-1)(n)/2)
+
+* so T(n) = k*n*(n-1)/2 => (k/2)n^2 - (k/2)n
+
+* we can ignore here (k/2)n 
+* so T(n) = k*n^2/2
+* T(B.S) = cn^2 where   c = k/2
+* so Bubble sort is O(n^2)
+
+
+
