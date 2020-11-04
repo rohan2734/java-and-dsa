@@ -17,3 +17,15 @@
 * we can think like n-2 has done some work , and then n-3  and so on
 
 * the easiest way to think is , we write a recurrance relation
+
+* T(n) = k1+ k2 + T(n-1)
+
+* T(n) = T(n-1) + k
+* T(n-1) = T(n-2) + k
+* T(1) = T(0) + k
+* T(0) = k
+
+* T(n) = k + k + ... (n+1) times
+* T(n) = k(n+1) = kn + k = kn
+Factorial is O(n)
+

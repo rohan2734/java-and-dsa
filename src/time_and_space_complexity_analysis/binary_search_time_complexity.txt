@@ -1,0 +1,23 @@
+* Binary search recursive algorithm
+  _ _ _ _ _ _ _ _ _ _ 
+ |_|_|_|_|_|_|_|_|_|_|
+ 
+* here if we want to find a element in a sorted array, we are checking it with 
+  the mid and if it is not, we are checking if it is greater
+  or lesser , then moving right or left respectively.
+  
+* then we check the mid element, and we move left or right
+* T(n) = k + T(n/2)
+* T(n/2) = k + T(n/4)
+* T(n/4) = k + T(n/8)
+* T(1) = k
+
+* add all these
+
+* lets say we reached 1 in x times, then the last element is n/2^x
+* n/2^x = 1 => 2^x = n =>
+* x = log n
+
+* T(n) = k + k + ... logn times
+* T(n) = k(logn)
+* binary search is O(logn)
