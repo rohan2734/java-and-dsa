@@ -1,0 +1,52 @@
+*  Base case -> k
+* call on first half -> T(n/2)
+* call on second half -> T(n/2)
+   
+   i             j 
+   |             |
+   _ _ _ _ _     _ _ _ _ _ 
+* |_|_|_|_|_|   |_|_|_|_|_|
+
+   k
+   |
+   _ _ _ _ _ _ _ _ _ _
+* |_|_|_|_|_|_|_|_|_|_|
+
+* here we choose the right element , then lets say we moved i, and also we move k,
+  and we repeat,
+
+* and we have n elements, so we do the comparision of two elements, and move the i or j and move k, for n positions
+  and we copy them back.
+  
+* compare and fill => k1n
+* fill back => k2n
+* and k1n+k2n => k3n
+
+*  Base case -> k
+* call on first half -> T(n/2)
+* call on second half -> T(n/2)
+   
+* now we merge two halves into second array => k1n
+* copy elements from second to input => k2n
+
+* total work 
+* T(n) = k + 2T(n/2) + k1n + k2n
+* (we can ignore k, since there is no n in k )
+* T(n) = 2T(n/2) + kn
+
+* T(n) = 2T(n/2) + kn
+* T(n/2) = ( 2T(n/4) + kn/2) (to cancel T(n/2) we are multiplying with 2)
+* T(n/4) = 2T(n/8) + kn/4
+
+* T(n) = 2T(n/2) + kn
+* 2 X T(n/2) = 2 X ( 2T(n/4) + kn/2) => kn 
+* 4 X T(n/4) = 4 X (2T(n/8) + kn/4) => kn
+* T(1) = k
+
+* n + n/2 + ... n/2^x 
+* n/2^x = 1, x = logn 
+
+* and kn(logn) times, so O(nlogn) 
+
+
+
