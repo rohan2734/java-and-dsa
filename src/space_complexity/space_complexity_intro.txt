@@ -1,0 +1,47 @@
+* space complexity : space required as a function f(n)
+
+* if there is an array a[], and we are asked to sort,
+  and if we are sorting it within the given array, then
+  it wont be counted under space complexity 
+
+* but it will be counted, if we take another array and 
+  sort the given array, then that auxiliary array will be
+  considered under the space complexity. 
+  
+* while(i<n){
+    int k;
+    i++;
+  } 
+  
+  4 byte memory n times.
+  
+
+* auxiliary space
+* maximum space required at any part of time during 
+  execution of program
+  
+* recursion : factorial
+
+  int fact(int n){
+    if(n==0){
+     return 1;
+     }
+     
+     return n*fact(n-1);
+   }
+   
+    here actually we are not using any variable to store
+    and the space complexity is 0 here, but actually there 
+    is space complexity.
+    
+
+* we are taking a function on n, it is calling f(n-1),then f(n-2)
+  so on, we get f(0), when we reach this base case, then at that time
+  there are n functions waiting in the memory, waiting for other small functions.
+  so we  are using some constant k space, and there are n functions, 
+  so the space complexity is kn.
+  that means the space complexity is bigo of n, O(n). 
+    
+
+   
+  

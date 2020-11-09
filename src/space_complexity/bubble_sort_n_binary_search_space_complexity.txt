@@ -1,0 +1,14 @@
+* let us say we used some 5 variables and 50 bytes, 
+  this is constant space  k,
+* it is not dependent on n.
+* space complexity of BUBBLE SORT is  k*n^0
+* bigo of n^0 or  O(n^0)
+* it has constant space requirement
+* there is no extra space required.
+
+
+* BINARY SEARCH (recursively)
+
+* we will have logn functions, and each funciton will
+  take k constant space.
+* total space requirement, is klogn, and it is O(logn)
