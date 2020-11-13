@@ -1,0 +1,9 @@
+* Final => data member
+* we were not able to change it , once initialized
+* it can be applicable at one or more places
+* we can make  a function or a class to be final
+
+* if we make a function as final =>subclass cannot override this function  
+* if we make a class as final => we cannot inherit from this class
+  (no inheritance from this class)
+  
