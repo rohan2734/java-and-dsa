@@ -1,0 +1,54 @@
+package oops_concepts.generics;
+
+public class PairUse_generics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Pair p = new Pair(1,2);
+		p.setFirst(10);
+		System.out.println(p.getFirst());
+		System.out.println(p.getSecond());
+		
+		PairString ps = new Pair("ab","cd");
+	}
+
+}
+
+
+* here if we want to create a new Pair object for String,
+* then we need to create one more class for PairString , and 
+  copy the code of Pair and update it from int to String everywhere
+
+* so when are going to create the objects, at that time , we define T 
+
+package oops_concepts.generics;
+
+public class Pair<T> {
+	private T first;
+	private T second;
+	
+}
+
+* now pair class is a generic
+
+* 	Pair<int> p1= new Pair<int>(1,2);
+* we cannpt pass int, since int is primitive type, we can 
+  only pass object oriented type
+
+*  Pair<Integer> p1= new Pair<Integer>(1,2);
+* but we can make a object like this, here Integer is the class name,
+  and both are mostly the same.
+  
+* the only difference is ,
+  Integer a =10; 
+  
+  * here u are creating an object
+  
+  int a=10; * but here u are not creating an object
+  
+* likewise for 
+    primitive type  Classes
+	char          => Character
+	boolean       => Boolean
+	int           => Integer
+  

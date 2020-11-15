@@ -1,0 +1,39 @@
+* suppose we have classes of 
+ 
+    Car, Bicycle, Boat ,
+ 
+* now after creating these classes,we noticed that, they have 
+   some common properties, so lets, make  a parent class.
+* now we have made a parent class of vehicle.
+ 
+* now the use of abstract class is, whenever a vehicle class has been
+   asked any question, it forces its subclasses to answer it.
+* example, if we create a vehcile object v, and we are trying to check
+  if the vehicle is motorized or not by, v.isMotorized(),\
+* now the vehicle cannot answer it, because it can be either a car, a bicycle,
+  or a boat.
+* so it forces its subclasses to answer this question   
+
+* so we declare the function in the Vehicle class, and we leave the body as 
+  empty for the abstract_class.
+  
+* and if we make a function as an abstract, its class should also be an abstract class
+* and after we make a function as an abstract, it should be defined in every subclass 
+
+* and we cannot make a vehicle object also , when the class is an abstract class
+
+* abstract funtions or incomplete funcitons:
+
+* when we declare a  function as an abstract funtion in a class, since
+  it subclass is inherting from it, it also gets the incomplete function 
+  or abstract function
+* or this subclass can complete the incompleteness
+* or it can also declare itself as an abstract class,then we cannot make objects of this subclass also
+
+* but we can still do 
+ Vehicle v = new Car(1,2);
+ 
+ since v is poiting towards a car object, here the object of car class is created
+ ( this concept is polymorphism)
+ 
+ v.isMotorized() // is also valid

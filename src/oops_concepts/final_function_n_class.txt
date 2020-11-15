@@ -7,3 +7,96 @@
 * if we make a class as final => we cannot inherit from this class
   (no inheritance from this class)
   
+package oops_concepts;
+
+public class Car extends Vehicle{	
+	int numGears;
+	boolean isConvertible;
+	
+	public Car(int numGears,int maxSpeed) {
+		super(maxSpeed);
+		this.numGears=numGears;
+		System.out.println("Car Constructor");
+	}
+	
+	public boolean isConvertible() {
+		return isConvertible;
+	}
+	
+	
+	
+	public void print() {
+		super.print();
+		
+//		System.out.println("car Color : " + color);
+//		System.out.println("car maximum speed : " + getMaxSpeed());
+		System.out.println("Car numGears : " +numGears );
+//		System.out.println("Car isConvertible : " + isConvertible);
+		System.out.println("car's print");
+	}
+}
+  
+* in this code, before, when we call c.print(), by creating  a car object from car class
+* we call print of car class only but not print of vehicle class
+* therefore the car class is able to overwrite the print funciton
+
+
+package oops_concepts;
+
+public class Vehicle {
+
+	protected String color;
+	private int maxSpeed;
+	
+	public  Vehicle(int maxSpeed) {
+		this.maxSpeed=maxSpeed;
+		System.out.println("Vehicles constructor");
+	}
+	
+	
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+	
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed=maxSpeed;
+	}
+	public final void print() {
+		//System.out.println("Vehicle's print");
+		System.out.println("Vehicle Color : " + color);
+		System.out.println("Vehicle maximum speed : " + maxSpeed);
+	}
+}
+
+
+* now if we make the print funciton of the vehicle class , as final, then the car class
+* or any subclass, cannot make  a function of same name , and thus cannot overwrite
+* or else ,we should name a new name to the print funciton of the car class
+
+
+* now if the vehicle class is final
+
+public final class Vehicle {
+
+	protected String color;
+	private int maxSpeed;
+	
+	public  Vehicle(int maxSpeed) {
+		this.maxSpeed=maxSpeed;
+		System.out.println("Vehicles constructor");
+	}
+	
+	
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+	
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed=maxSpeed;
+	}
+	public final void print() {
+		//System.out.println("Vehicle's print");
+		System.out.println("Vehicle Color : " + color);
+		System.out.println("Vehicle maximum speed : " + maxSpeed);
+	}
+}

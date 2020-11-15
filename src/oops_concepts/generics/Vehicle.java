@@ -1,6 +1,7 @@
-package oops_concepts;
+package oops_concepts.generics;
 
-public abstract class Vehicle {
+//public  class Vehicle {
+public final class Vehicle implements PrintInterface{
 //public final class Vehicle{
 
 	protected String color;
@@ -11,9 +12,9 @@ public abstract class Vehicle {
 		System.out.println("Vehicles constructor");
 	}
 	
-	public abstract boolean isMotorized();
+	//public abstract boolean isMotorized();
 	
-	public abstract String getCompany();
+	//public abstract String getCompany();
 	
 	public int getMaxSpeed() {
 		return maxSpeed;

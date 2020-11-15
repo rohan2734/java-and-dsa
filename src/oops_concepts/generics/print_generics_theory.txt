@@ -1,0 +1,25 @@
+/**
+	 * T<-no bound && print() X
+	 * 
+	 * T <-  extends Vehicle && print() Y
+	 * here we might not need only Vehicle class which has print,we can have other classes too, so how to extend them? 
+	 * instead we create an interface
+	 * 
+	 */
+	 
+	 public static<T extends PrintInterface> void printArray(T a[]) {
+		for(int i=0;i<a.length;i++) {
+			a[i].print();
+			System.out.print(" ");
+		}
+		System.out.println();
+	}
+	
+	even though  we there is a class or a interface, we always write extends at 
+	public static<T extends PrintInterface> void printArray(T a[]) {
+	
+	
+*  no bounds, print() X
+*  only vehicle subclass , has print, very restrictive
+*  only classes which implement PrintInterface, the class should implement PrintInterface
+

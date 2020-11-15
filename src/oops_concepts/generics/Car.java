@@ -1,4 +1,4 @@
-package oops_concepts;
+package oops_concepts.generics;
 
 public  abstract class Car extends Vehicle{	
 	int numGears;
@@ -13,10 +13,10 @@ public  abstract class Car extends Vehicle{
 		this.numGears=numGears;
 		System.out.println("Car Constructor");
 	}
-	@Override
-	public boolean isMotorized() {
-		return true;
-	}
+//	@Override
+//	public boolean isMotorized() {
+//		return true;
+//	}
 	
 	
 	

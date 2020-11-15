@@ -1,0 +1,20 @@
+* interfaces are the extension of abstract class
+
+* we can think of a interface as , an abstract class whose, all methods
+  are abstract.
+  
+* if we want a class to inherit from other class, as we write exteds
+* when it is an interface, we write it as implements
+
+* we cannot inherit from more than one class, but 
+  a class can do extend and implement as well 
+  and we can implement from many interfaces as well
+  
+* if  a class has every method which is abstract, then we also 
+  call it as purely abstract class
+  
+* any class which implements as  interface , it has 2 options
+  * it can make itself as an abstract class
+  * or it should implement all of the functions of the interface
+  
+* an interface an extend other interface also

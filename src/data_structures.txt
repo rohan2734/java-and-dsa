@@ -1,0 +1,8 @@
+* data structure:
+* defines the way we are going to organize the data into the memory
+* and how i am able to get access of the data that is stored
+
+* different data structures , provide us with different arrangements,
+  and different options.
+  
+
