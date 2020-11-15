@@ -1,0 +1,25 @@
+* ArrayList<Integer> list1 = new ArrayList<>();
+* as soon as you create the array, it makes a fixed capacity of 10
+* capacity, is the maximum size till which it can store the elements
+* size is the number of elements which it has stored.
+
+* ArrayList<Integer> list1 = new ArrayList<>(5);
+* when you pass an argument, it will be the initial capacity
+* but the size is still 0 , since the array doesnt have anything yet now
+* list.add(5), it adds the element at the last
+* list.add(index, element), if there is already an element at that index, 
+  then they shift towards right, and we add the new element at that index
+  
+* in  case of array we use arr[i] , but in case of ArrayList , 
+  we use arr.get(i).
+* when we want to delete , we use array.remove(index), then the index+1, comes to index, 
+  and it happens till the last element
+  
+* for loop, moves on indexes,
+* for each loop moves on elements, 
+  we cant change the elements,we use it only for traversal
+  
+* the reason , we moved to the ArrayList, was, because , 
+  in Array, we need to define the size in the initial step.
+* so here ,we can define the size as much as we want, and add and delete
+  

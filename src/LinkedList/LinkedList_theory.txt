@@ -1,0 +1,16 @@
+* in ArrayList, we had to tell the array size
+  because they were contiguous, elements were stored continuously.
+* so in the linked list, we save them at random memory locations
+* the place where we are going to store, is called node.
+
+* for connecting them, that node, will store the address of the next node
+* first node of the chain is head.
+* last node of the chain is tail.
+
+* if we want to go to the third element, then we need to traverse the first two elements,
+  only then we will be able go to the third element.
+
+* the first part of the node is the data,
+* the second part of the node is the : reference to the next node of the list.
+
+
