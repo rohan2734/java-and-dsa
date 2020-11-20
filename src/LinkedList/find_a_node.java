@@ -2,11 +2,22 @@ package LinkedList;
 
 import java.util.Scanner;
 
-public class takeInput_LinkedListUse {
-
-	/**
-	 * @param args
-	 */
+public class find_a_node {
+	public static int findNode(Node<Integer> head,int n){
+		Node<Integer> temp = head;
+		
+		int i=0;
+		while(temp!=null){
+			if(temp.data == n){
+				
+				return i;
+			}
+			i++;
+			temp=temp.next;
+		}
+		return -1;
+		
+	}
 	public static Node<Integer> takeInput(){
 		Node<Integer> head = null,tail = null;
 		Scanner s = new Scanner(System.in);
@@ -26,22 +37,16 @@ public class takeInput_LinkedListUse {
 		}
 		return head;
 	}
-	public static void printNodes(Node<Integer> head){
-		Node<Integer> temp = head;
-		
-		while(head != null) {
-			System.out.print(head.data +" ");
-			head = head.next;
-		}
-		System.out.println();
-		head=temp;
-	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
 		Node<Integer> head = takeInput();
-		printNodes(head);
+		int n=10;
+		int outputIndex = findNode(head,n);
+		
+		System.out.println(outputIndex);
+		
+		
+		
 		
 	}
 

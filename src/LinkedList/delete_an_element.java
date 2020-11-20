@@ -2,11 +2,12 @@ package LinkedList;
 
 import java.util.Scanner;
 
-public class takeInput_LinkedListUse {
+public class delete_an_element {
 
 	/**
 	 * @param args
 	 */
+	
 	public static Node<Integer> takeInput(){
 		Node<Integer> head = null,tail = null;
 		Scanner s = new Scanner(System.in);
@@ -36,13 +37,35 @@ public class takeInput_LinkedListUse {
 		System.out.println();
 		head=temp;
 	}
+	
+	public static Node<Integer> deleteElement(Node<Integer> head,int pos){
+		Node<Integer> temp = head;
+		int i=0;
+		while(i<pos-1 && temp!=null){
+			temp = temp.next;
+			i++;
+		}
+		if(pos == 0){
+			head = temp.next;
+		}
+        if(temp != null){
+            temp.next = temp.next.next;
+        }
+		
+		
+		return head;
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
 		Node<Integer> head = takeInput();
-		printNodes(head);
 		
+		//10 20 30 40 50
+		//0   1  2  3  4
+		head=deleteElement(head,0);
+		printNodes(head);
 	}
 
 }
