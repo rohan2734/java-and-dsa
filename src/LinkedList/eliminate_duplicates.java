@@ -40,7 +40,7 @@ public class eliminate_duplicates {
 	public static Node<Integer> eliminateDuplicates(Node<Integer> head){
 		Node<Integer> temp1 = head;
 		Node<Integer> temp2 = head;
-        if(temp1.next == null){
+        if( temp1==null || temp1.next == null ){
             return head;
         }
         temp2=temp2.next;
@@ -48,7 +48,10 @@ public class eliminate_duplicates {
 		while(temp1!=null ){
 			
             
-			while(temp2 != null && temp1.data == temp2.data){
+			while(temp2 != null && temp1.data.equals(temp2.data)){//temp1.data == temp2.data is invalid
+				/* == is a reference comparison, i.e. both objects point to the same memory location
+				.equals() evaluates to the comparison of values in the objects 
+				*/
 				temp2=temp2.next;
 			}
 			temp1.next =temp2;
@@ -61,6 +64,7 @@ public class eliminate_duplicates {
        
 		return head;
 	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer> head = takeInput();

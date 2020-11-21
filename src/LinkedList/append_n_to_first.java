@@ -44,6 +44,31 @@ public class append_n_to_first {
 		return tempHead;
 		
 	}
+	public static Node<Integer> lecturers_appendLastNtoFirst(Node<Integer> head, int n){
+		if(n==0 || head == null){
+			return head;
+		}
+		
+		Node<Integer> fast = head;
+		Node<Integer> slow = head;
+		Node<Integer> initialHead = head;
+		
+		for(int i=0;i<n;i++){
+			fast=fast.next;
+		}
+		while(fast.next !=null){
+			slow=slow.next;
+			fast=fast.next;
+		}
+		
+		Node<Integer> temp = slow.next;
+		slow.next = null;
+		fast.next= initialHead;
+		head=temp;
+		
+		return head;
+		
+	}
 	
 	public static Node<Integer> takeInput(){
 		Node<Integer> head = null,tail = null;

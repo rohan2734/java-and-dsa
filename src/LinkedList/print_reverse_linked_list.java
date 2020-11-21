@@ -49,11 +49,24 @@ public class print_reverse_linked_list {
 		}
 		System.out.print(head.data +" ");
 	}
+	
+	public static void printReverseByRecursion(Node<Integer> head){
+		if(head == null){
+			return;
+		}
+		
+		printReverseByRecursion(head.next);
+		System.out.print(head.data +" ");
+		return;
+		
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Node<Integer> head = takeInput();
-		printReverse(head);
+		printReverseByRecursion(head);
+//		printReverse(head);
 	}
 
 }
