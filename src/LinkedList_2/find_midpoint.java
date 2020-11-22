@@ -27,7 +27,7 @@ public class find_midpoint {
 	        //Your code goes here
 		 Node<Integer> slow=head;
 		 Node<Integer> fast=head;
-	        if(head.next == null || head == null){
+	        if(head == null || head.next == null){
 	            return head;
 	        } 
 	        while(fast.next != null && fast != null){
