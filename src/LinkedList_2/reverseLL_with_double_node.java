@@ -4,6 +4,25 @@ import java.util.Scanner;
 
 public class reverseLL_with_double_node {
 
+	public static DoubleNode reverseLLBetter(Node<Integer> head){
+		if(head == null || head.next == null){
+			DoubleNode ans= new DoubleNode();
+			ans.head  = head;
+			ans.tail=head;
+			return ans;
+		}
+		
+		 DoubleNode smallAns = reverseLLBetter(head.next);
+		 smallAns.tail.next = head;
+//		 smallAns.tail=head;
+		 head.next = null;
+		 
+		DoubleNode ans = new DoubleNode();
+		ans.head = smallAns.head;
+		ans.tail=head;
+		
+		return ans; 
+	}
 	public static void printNodes(Node<Integer> head){
 		Node<Integer> temp = head;
 		
@@ -36,7 +55,11 @@ public class reverseLL_with_double_node {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Node<Integer> head = takeInput();
+		DoubleNode ans = reverseLLBetter(head);
+		printNodes(ans.head);
 	}
 
 }
+//we can also shift the DoubleNode class here, without public keyword
+//since we can have only one public class ,where the class and file names are same

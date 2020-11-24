@@ -2,8 +2,8 @@ package LinkedList_2;
 
 import java.util.Scanner;
 
-public class lecturers_reverseLL {
-	
+public class delete_element_recursively {
+
 	public static Node<Integer> takeInput(){
 		Node<Integer> head = null,tail = null;
 		Scanner s = new Scanner(System.in);
@@ -33,29 +33,34 @@ public class lecturers_reverseLL {
 		System.out.println();
 		head=temp;
 	}
-
-	public static Node<Integer> reverseLL(Node<Integer> head){
-		if(head == null || head.next == null){
+	
+	public static Node<Integer> deleteElementRecursively(Node<Integer> head ,int pos){
+		if(head == null){
 			return head;
 		}
-		Node<Integer> finalHead=reverseLL(head.next);
-		Node<Integer>temp=finalHead;
-		while(temp.next!=null){
-			temp=temp.next;
+        if(pos == 0){
+//			Node<Integer> temp=head;
+		   head=head.next;
+//		   temp.next=null;
+		   return head;
 		}
-		temp.next=head;
-		head.next=null;
-		return finalHead;	
+		
+		
+		LinkedListNode<Integer>smallHead = deleteNodeRec(head.next,pos-1);
+        // if(head!=null){
+        //     head.next = smallHead;
+        // }
+        head.next = smallHead;
+		
+		return head;
+		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node<Integer> head = takeInput();
-		head = reverseLL(head);
+		int pos=1;
+		head =deleteElementRecursively(head,pos);
 		printNodes(head);
 	}
-	/**
-	 * time complexity: o(n^2)
-	 * T(n) = T(n-1)+n-1
-	 */
 
 }
