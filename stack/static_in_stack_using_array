@@ -1,0 +1,6 @@
+* public static boolean isEmpty(){
+}
+
+* this is a function which cannot be shared by the instance of stack
+* instead every instance of stack , should have isEmpty(),
+* so we should avoid using static
