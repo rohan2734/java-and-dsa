@@ -1,0 +1,7 @@
+* there are 2 type of data structures, 
+* one is which changes how data is stored in memory-ex: Linked-List,array
+* then we have stacks and queues,  which are a layer above a basic structure
+  which defines how data is accessible to the user.
+
+* in the case of LL, we had head node,
+* but in trees we have root node
