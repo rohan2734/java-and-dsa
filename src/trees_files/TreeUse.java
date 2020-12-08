@@ -1,4 +1,4 @@
-package trees;
+package trees_files;
 import java.util.Scanner;
 
 import stacks_and_queues.QueueEmptyException;

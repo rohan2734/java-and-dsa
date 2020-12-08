@@ -1,4 +1,5 @@
-package trees;
+package trees_files;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ public class print_level_wise {
 
 	public static class QueueUsingLL<T> {
 
-		class Node<T> {
+		public static class Node<T> {
 			T data;
 			Node<T> next;
 			Node(T data){
@@ -116,19 +117,32 @@ public class print_level_wise {
 	
 	public static void printLevelWise(TreeNode<Integer> root){
 		
-		QueueUsingLL<TreeNode<Integer>> pendingNodes = new QueueUsingLL<TreeNode<Integer>>();
-		pendingNodes.enqueue(root);
-		System.out.println(root);
-		while(!pendingNodes.isEmpty()){
-			TreeNode<Integer> currentNode = pendingNodes.dequeue();
-			String s = "";
-			for(int i=0;i<currentNode.children.size();i++){
-				s  = s + currentNode.children.get(i) +" "; 
-				pendingNodes.enqueue(currentNode.children.get(i));
+		QueueUsingLL<TreeNode<Integer>> queue = new QueueUsingLL<TreeNode<Integer>>();
+		queue.enqueue(root);
+		queue.enqueue(null);
+		
+		while(!queue.isEmpty()){
+			try{
+				TreeNode<Integer> front = queue.dequeue();
+				
+				if(front == null){
+					System.out.println();
+					if(!queue.isEmpty()){
+						queue.enqueue(null);
+					}
+					
+				}else{
+					System.out.print(front.data +" ");
+					for(int i=0;i<front.children.size();i++){
+						queue.enqueue(front.children.get(i));
+					}
+				}
+				
+			}catch(QueueEmptyException e){
+				
 			}
-			System.out.println(s);
+			
 		}
-
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

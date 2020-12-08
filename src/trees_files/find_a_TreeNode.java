@@ -1,11 +1,10 @@
-package trees;
+package trees_files;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import stacks_and_queues.QueueEmptyException;
-import trees.print_level_wise.TreeNode;
-import trees.print_level_wise.QueueUsingLL.Node;
+
 
 public class find_a_TreeNode {
 	
@@ -94,6 +93,9 @@ public class find_a_TreeNode {
 		}
 	
 	public static int numNodes( TreeNode<Integer> root){
+		if(root == null){
+			return 0;
+		}
 		int count  = 1;
 		for(int i=0;i<root.children.size();i++){
 			count += numNodes(root.children.get(i));
@@ -128,8 +130,9 @@ public class find_a_TreeNode {
 				//shouldnt enter
 				return null;
 			}
-			return root;
+			
 		}
+		return root;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
