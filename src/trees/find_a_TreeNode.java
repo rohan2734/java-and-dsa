@@ -134,7 +134,7 @@ public class find_a_TreeNode {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
-		TreeNode<Integer> root = takeInputLevelWise(s);
+		TreeNode<Integer> root = takeInputLevelWise();
 		
 //		print(root);
 	}
