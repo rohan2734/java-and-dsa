@@ -1,9 +1,18 @@
 package trees_files;
 import java.util.Scanner;
 
-import stacks_and_queues.QueueEmptyException;
+// import stacks_and_queues.QueueEmptyException;
 
 public abstract class TreeUse {
+
+	public static class QueueEmptyException extends Exception {
+
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		 
+	}
 	
 	public static TreeNode<Integer> takeInput(Scanner s){
 		int n;
