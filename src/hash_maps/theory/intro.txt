@@ -1,0 +1,23 @@
+* we have string, and we want to find, a  character with highest frequency in a string
+* sort, and then count, O(nlogn),take a max count and max char,(o(n))
+
+* we can create an array of 256 characters, 
+* and we can update, the 97 th index value, when we get a , similarly , 98th index for b, etc
+
+int a[256] //frequency of characters
+a[str[i]]++;
+
+* maximum occuring word
+
+* in arrays, keys must be only integers,but values can be anything
+* here, we want the keys to not only to be integers, it can be of any type, 
+  we will decide, the type of keys and values
+
+
+* we want functions like insertKeyAndValue(K key,V Value),getValueForKeyGiven(K Key),deleteKeyAndValue(K Key)  in the maps
+
+* create a LinkedList , it has key and value, if we want to delete an element , we would have to search, and delete it
+* but in maps, we would get the key and we would delete it,and it would take only O(1)
+ time complexity
+
+* using hash maps, we could improve the time complexity of O(logn) too
