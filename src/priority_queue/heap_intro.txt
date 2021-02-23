@@ -1,0 +1,9 @@
+heap properties:
+* heap is a complete Binary tree (CBT)
+* heap order property
+
+CBT properties:
+* it is a normal Binary tree, but it also has a condiiton that
+* there should be nodes filled upto the maximum capacity, for every level , except last level
+* at last level, when we insert, insertion is from left to right
+

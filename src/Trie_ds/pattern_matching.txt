@@ -1,0 +1,3 @@
+*  searching words with ctrl+ F
+* it has a lot of use cases
+

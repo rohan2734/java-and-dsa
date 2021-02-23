@@ -1,0 +1,4 @@
+* huffman coding:
+
+* we want to compress the text, means , it would take less space than before
+

@@ -1,0 +1,17 @@
+* Tries is faster than Hashmaps, since we dont need to hash, and no need to 
+generate any hash map function
+
+* other thing is, Trie, stores the data, is very much better than Hashmaps
+
+* Trie can be used, 
+where, we use suggestions
+
+* like if we used, 
+a, then it would show suggestions like are
+
+* Automcomplete feature is also used 
+* it can check the spellings also 
+
+* it is used in the T9 dictionairies
+* It is used in the pattern matching also
+

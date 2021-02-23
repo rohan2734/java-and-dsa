@@ -1,0 +1,5 @@
+O(1) means that:
+the time taken to search that element, is not proportional to the size of the data structure
+it doesnt mean that, it doesnt take time,it also takes time
+
+
