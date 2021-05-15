@@ -1,0 +1,18 @@
+jframe is a window component 
+
+Jpanel : we have outer window, cross , minimize, buttons, 
+text area also ( JText ), where we take input
+
+Jpanel collects the input 
+
+Flow Layout :
+how the things are respectively aligned 
+horizontal alignment 
+
+Grid Layout:
+components are aligned in grid 
+
+
+JButton is already a class for a button 
+dimW, dimH , 
+

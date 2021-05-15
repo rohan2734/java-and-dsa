@@ -1,0 +1,40 @@
+* it is a type of data strucutre, it is used for representing real time problems
+* we have some nodes but there is no pattern to the edges
+* some of the vertices are connected to each other, some of them are not
+
+* a graph is a set of vertices and edges connecting them
+* we need graphs, because we cannot store data in trees
+
+* ex ,facebook users , each of node is user, there is no tree structure here, like one user, have few users, then so on
+
+* we have conections between users
+
+* a tree is a graph which is connected and doesnt contain any cycle
+
+* take input , (using adjacency matrix)
+sort by weights 
+
+* edge class 
+- source 
+- destination
+- weight
+
+* input -> Edge (e)
+* sort the input array on weights 
+* inbuilt sorting - Arrays.sort()
+* implement comparable interface 
+* count = 0 for edges count 
+while (count !=n-1)
+* pick edge on the edges array 
+   current edge , we cannot add blindly into MST 
+   check if there is any cycle 
+   otherwise we can add the edge , 
+   condiitons are based on union find 
+   check the top most parent , since we need to store this also
+   we need to make parent array 
+   initialise array with 0,1,2,3,4.
+   take parent of both , check the parents, if it is same,skip 
+   if it is not same, it is safe to add in MSt 
+   in output add current , count++,
+
+

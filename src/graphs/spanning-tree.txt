@@ -1,0 +1,16 @@
+* spanning trees : given an undirected and corrected graph  , a tree which contains all the vertices
+
+* for a given graph we can have multiple spanning trees
+
+ex: 
+include all vertices 
+
+* total vertices = n
+* total number of edges = E =n-1 
+
+* what are minimum spanning tree :
+    weighted spanning tree
+
+hasPath complexity o(v+E), using BFs or DFS .
+
+
